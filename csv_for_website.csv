@@ -1,0 +1,61 @@
+﻿image_url,image_id,caption,error_type,model,f_all,f_attribute,f_object,f_relation,f_cardinality
+http://images.cocodataset.org/train2017/000000007936.jpg,7936,a black bear standing next to a tree.,Relation,git,0.3333,1,0.5714,0,
+http://images.cocodataset.org/train2017/000000084460.jpg,84460,A woman wearing a red jacket and black boots is laying on a wooden bench.,Relation,llava,0.3333,0.5,0.5,0,
+http://images.cocodataset.org/train2017/000000104624.jpg,104624,A person is typing on a computer keyboard.,Relation,llava,0.24,0.5,0.4444,0,
+http://images.cocodataset.org/train2017/000000130291.jpg,130291,a man helping a woman tie a red tie.,Relation,git,0.2857,0.4,0.5,0,
+http://images.cocodataset.org/train2017/000000197859.jpg,197859,two beds in a room with a lamp on the side,Relation,clipcap,0.4167,0.6667,0.8,0,1
+http://images.cocodataset.org/train2017/000000222453.jpg,222453,a man cutting a chocolate cake with a pair of scissors.,Relation,git,0.4138,0.6667,0.6154,0,
+http://images.cocodataset.org/train2017/000000304832.jpg,304832,a black and white cat looking at itself in a mirror.,Relation,git,0.4,0.8,0.6667,0,
+http://images.cocodataset.org/train2017/000000324950.jpg,324950,A black and white cow is walking on a grassy field.,Relation,llava,0.3448,0.6,0.4444,0,
+http://images.cocodataset.org/train2017/000000335982.jpg,335982,A black and white cat is laying on a pink blanket.,Relation,llava,0.381,0.8,0.5714,0,
+http://images.cocodataset.org/train2017/000000447967.jpg,447967,a man standing in front of a red wall,Relation,blip2,0.3478,1,0.5455,0,
+http://images.cocodataset.org/train2017/000000485044.jpg,485044,a black cat laying on a computer keyboard,Relation,clipcap,0.4211,0.5714,0.5714,0,
+http://images.cocodataset.org/train2017/000000485083.jpg,485083,a black and white cat laying on top of a suitcase,Relation,clipcap,0.4762,0.5714,0.75,0,
+http://images.cocodataset.org/train2017/000000518288.jpg,518288,A young boy wearing a red jacket and black pants is standing on a pair of skis.,Relation,llava,0.303,0.5,0.5,0,
+http://images.cocodataset.org/train2017/000000523907.jpg,523907,A hot dog with mustard and ketchup on a bun.,Relation,llava,0.303,0.5,0.6667,0,
+http://images.cocodataset.org/train2017/000000532269.jpg,532269,Two baseball players sit on a bench with a baseball bat between them.,Relation,llava,0.4138,0.6,0.5455,0,0.6667
+http://images.cocodataset.org/train2017/000000006824.jpg,6824,a person riding a wave on a surfboard,No Error,blip2,0.3846,0.4,0.5,0.2222,
+http://images.cocodataset.org/train2017/000000024516.jpg,24516,a hand holding a banana with black spots on it,No Error,blip2,0.32,0.2857,0.4444,0.2222,
+http://images.cocodataset.org/train2017/000000032949.jpg,32949,a woman petting a black cat on a green bench.,No Error,git,0.4615,0.6667,0.5,0.25,
+http://images.cocodataset.org/train2017/000000079268.jpg,79268,a stop sign on a street corner with a crane in the background,No Error,blip2,0.4,0.4,0.5,0.2857,
+http://images.cocodataset.org/train2017/000000091751.jpg,91751,a man kicking a soccer ball on a field.,No Error,git,0.4444,0.3333,0.5,0.4444,
+http://images.cocodataset.org/train2017/000000112562.jpg,112562,a large orange truck driving down a street.,No Error,git,0.3448,0.3636,0.4,0.25,
+http://images.cocodataset.org/train2017/000000203711.jpg,203711,a silver car parked on the side of the road,No Error,blip2,0.5714,0.5,0.75,0.4444,
+http://images.cocodataset.org/train2017/000000205270.jpg,205270,a dump truck parked in front of a building,No Error,blip2,0.5,0.2857,0.6667,0.5,
+http://images.cocodataset.org/train2017/000000268018.jpg,268018,a man holding a cell phone to his ear.,No Error,git,0.5,0.5,0.6,0.4286,
+http://images.cocodataset.org/train2017/000000336811.jpg,336811,a zebra standing next to a stone wall.,No Error,git,0.2857,0.2222,0.3636,0.25,
+http://images.cocodataset.org/train2017/000000387375.jpg,387375,a group of people riding a ski lift,No Error,blip2,0.4348,0.4,0.6,0.25,
+http://images.cocodataset.org/train2017/000000499646.jpg,499646,three women sitting at a table,No Error,blip2,0.32,0.2222,0.5714,0.2222,1
+http://images.cocodataset.org/train2017/000000503717.jpg,503717,a woman swinging a tennis racket at a ball.,No Error,git,0.7059,0.6667,0.8571,0.5714,
+http://images.cocodataset.org/train2017/000000531405.jpg,531405,a black and white cat sitting on a zebra print couch,No Error,blip2,0.7,0.8,0.6667,0.5,
+http://images.cocodataset.org/train2017/000000573448.jpg,573448,a blender is next to a red bowl.,No Error,git,0.381,0.2857,0.5,0.3333,
+http://images.cocodataset.org/train2017/000000159168.jpg,159168,a street sign is on a pole,Cardinality,blip2,0.3478,0.2857,0.4444,0.2857,0
+http://images.cocodataset.org/train2017/000000023355.jpg,23355,a man holding a plate of pizza in a kitchen,Cardinality,clipcap,0.4138,0.2222,0.7273,0.2222,0
+http://images.cocodataset.org/train2017/000000117668.jpg,117668,four old airplanes flying in formation in the sky.,Cardinality,git,0.4,0.2222,0.6,0.3636,0
+http://images.cocodataset.org/train2017/000000082980.jpg,82980,a building with two baseball bats in front of it.,Cardinality,git,0.3704,0.25,0.6,0.2222,0
+http://images.cocodataset.org/train2017/000000388398.jpg,388398,a young girl sitting on a red bench.,Cardinality,git,0.4762,0.4444,0.5714,0.4,0
+http://images.cocodataset.org/train2017/000000017065.jpg,17065,a small kitten playing with a teddy bear.,Cardinality,git,0.3333,0.3636,0.3636,0.25,0
+http://images.cocodataset.org/train2017/000000292463.jpg,292463,a small child sitting at a table with a small dog.,Cardinality,git,0.3889,0.3077,0.6,0.3077,0
+http://images.cocodataset.org/train2017/000000281052.jpg,281052,a motorcycle parked in a parking lot,Cardinality,blip2,0.4706,0.3333,0.6667,0.4,0
+http://images.cocodataset.org/train2017/000000339974.jpg,339974,a traffic light with a green arrow on it.,Cardinality,git,0.3226,0.3077,0.3636,0.2857,0
+http://images.cocodataset.org/train2017/000000184241.jpg,184241,a man sitting on a bench with a tennis racket,Cardinality,clipcap,0.5263,0.5,0.75,0.2857,0
+http://images.cocodataset.org/train2017/000000130271.jpg,130271,a little girl holding a wii remote in her hand.,Cardinality,git,0.5,0.3636,0.6667,0.5,0
+http://images.cocodataset.org/train2017/000000220688.jpg,220688,"a living room with a couch, coffee table, and a lamp.",Cardinality,git,0.3902,0.2857,0.5714,0.3077,0
+http://images.cocodataset.org/train2017/000000299273.jpg,299273,"a living room with a couch, coffee table, tv and a window",Cardinality,clipcap,0.5,0.3333,0.7143,0.3333,0
+http://images.cocodataset.org/train2017/000000534723.jpg,534723,a school bus parked in a parking lot,Cardinality,clipcap,0.5556,0.4444,0.6667,0.6667,0
+http://images.cocodataset.org/train2017/000000449710.jpg,449710,a man holding a cell phone in his hand,Cardinality,clipcap,0.4516,0.4,0.5455,0.4,0
+http://images.cocodataset.org/train2017/000000397819.jpg,397819,a blonde woman is brushing her teeth with a mirror.,Attribute,git,0.3333,0,0.5455,0.2667,0
+http://images.cocodataset.org/train2017/000000137283.jpg,137283,a small slice of pizza in a box,Attribute,blip2,0.4545,0,0.8571,0.5714,
+http://images.cocodataset.org/train2017/000000177254.jpg,177254,A plate of food with broccoli and fries.,Attribute,llava,0.3846,0,0.4615,0.3333,
+http://images.cocodataset.org/train2017/000000102576.jpg,102576,A man wearing a white shirt and grey shorts is playing tennis on a clay court.,Attribute,llava,0.3333,0,0.5455,0.3333,
+http://images.cocodataset.org/train2017/000000268787.jpg,268787,A large sandwich with lettuce and chocolate on top.,Attribute,llava,0.3871,0,0.5333,0.4,
+http://images.cocodataset.org/train2017/000000397414.jpg,397414,A glazed doughnut sits on a napkin next to a cup of coffee.,Attribute,llava,0.381,0,0.6,0.3333,
+http://images.cocodataset.org/train2017/000000246183.jpg,246183,A group of people are holding up blue and yellow umbrellas.,Attribute,llava,0.381,0,0.6,0.3333,
+http://images.cocodataset.org/train2017/000000187511.jpg,187511,"A plate of food with broccoli, carrots, and fries.",Attribute,llava,0.3333,0,0.5,0.3077,
+http://images.cocodataset.org/train2017/000000162280.jpg,162280,A bathroom with a white sink and a green shower curtain.,Attribute,llava,0.4242,0.4444,0.5,0.3333,
+http://images.cocodataset.org/train2017/000000111121.jpg,111121,A young boy in blue uniform is pitching a baseball on a field.,Attribute,llava,0.375,0.1818,0.4615,0.5,
+http://images.cocodataset.org/train2017/000000498427.jpg,498427,A black and white dog is playing with a yellow frisbee in the snow.,Attribute,llava,0.6364,0.5,0.8571,0.5714,
+http://images.cocodataset.org/train2017/000000118379.jpg,118379,A black dog is laying on a stone walkway.,Attribute,llava,0.3636,0.2857,0.4444,0.3333,
+http://images.cocodataset.org/train2017/000000512337.jpg,512337,A large bird is perched on a branch of a tree.,Attribute,llava,0.5263,0.4,0.75,0.3333,
+http://images.cocodataset.org/train2017/000000220266.jpg,220266,A ginger cat is looking at its reflection in a mirror.,Attribute,llava,0.4138,0,0.6,0.4286,
+http://images.cocodataset.org/train2017/000000407625.jpg,407625,A man wearing a jacket is sitting in a car.,Attribute,llava,0.4444,0,0.7273,0.3333,
