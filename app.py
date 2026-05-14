@@ -215,10 +215,12 @@ elif st.session_state.stage == "experiment":
     import requests
     from PIL import Image
     from io import BytesIO
+    import urllib3
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
     try:
         headers = {"User-Agent": "Mozilla/5.0"}
-        response = requests.get(stimulus["image_url"], headers=headers, timeout=10)
+        response = requests.get(stimulus["image_url"], headers=headers, timeout=10, verify=False)
         img = Image.open(BytesIO(response.content))
         st.image(img, use_container_width=True)
     except Exception as e:
