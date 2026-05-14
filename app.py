@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import uuid
 import base64
 from db import get_sample_stimuli, save_response
@@ -220,29 +221,87 @@ elif st.session_state.stage == "experiment":
     st.markdown(f'<div class="caption-label">תיאור:</div>', unsafe_allow_html=True)
     st.markdown(stimulus["caption"])
 
+    # Track whether user has touched the slider
+    touched_key = f"touched_{idx}"
+    if touched_key not in st.session_state:
+        st.session_state[touched_key] = False
+
+    # Track whether user tried to submit without rating
+    tried_key = f"tried_{idx}"
+    if tried_key not in st.session_state:
+        st.session_state[tried_key] = False
+
+    st.markdown("""
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem;
+                    font-weight:600; color:#1a1a2e; margin-bottom:0.2rem; direction:ltr;">
+            <span>1</span><span>100</span>
+        </div>
+    """, unsafe_allow_html=True)
+
     rating = st.slider(
         "כמה את/ה מרוצה מהתיאור?",
-        min_value=1, max_value=100, value=100,
-        key=f"slider_{idx}"
+        min_value=0, max_value=100,
+        value=0,
+        key=f"slider_{idx}",
+        label_visibility="visible"
     )
 
-    if st.button("הבא ←" if idx < total - 1 else "סיום"):
-        st.session_state.ratings.append({
-            "stimulus_id": str(stimulus["_id"]),
-            "error_type": stimulus.get("error_type"),
-            "rating": rating
-        })
+    if not st.session_state[touched_key] and rating != 0:
+        st.session_state[touched_key] = True
+        st.rerun()
 
-        if idx < total - 1:
-            st.session_state.current_index += 1
+    has_rated = st.session_state[touched_key]
+
+    if not has_rated:
+        st.markdown("""
+            <style>
+                div.stButton > button {
+                    background-color: #b0aaa0 !important;
+                    color: #e0ddd8 !important;
+                    cursor: default !important;
+                }
+                div.stButton > button:hover {
+                    background-color: #b0aaa0 !important;
+                    color: #e0ddd8 !important;
+                }
+                div.stButton > button p {
+                    color: #e0ddd8 !important;
+                }
+            </style>
+        """, unsafe_allow_html=True)
+
+    col_btn, col_msg = st.columns([2, 3])
+
+    with col_btn:
+        clicked = st.button("הבא ←" if idx < total - 1 else "סיום", key=f"next_{idx}")
+
+    with col_msg:
+        if st.session_state[tried_key] and not has_rated:
+            st.markdown(
+                '<p style="color:#c0392b; font-size:1rem; margin-top:0.6rem;">אנא דרג/י את התיאור</p>',
+                unsafe_allow_html=True
+            )
+
+    if clicked:
+        if not has_rated:
+            st.session_state[tried_key] = True
             st.rerun()
         else:
-            save_response(
-                st.session_state.participant_id,
-                st.session_state.ratings
-            )
-            st.session_state.stage = "done"
-            st.rerun()
+            st.session_state.ratings.append({
+                "stimulus_id": str(stimulus["_id"]),
+                "error_type": stimulus.get("error_type"),
+                "rating": rating
+            })
+            if idx < total - 1:
+                st.session_state.current_index += 1
+                st.rerun()
+            else:
+                save_response(
+                    st.session_state.participant_id,
+                    st.session_state.ratings
+                )
+                st.session_state.stage = "done"
+                st.rerun()
 
 # ─────────────────────────────────────────
 # DONE
