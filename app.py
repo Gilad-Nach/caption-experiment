@@ -212,11 +212,17 @@ elif st.session_state.stage == "experiment":
 
     stimulus = stimuli[idx]
 
-    st.markdown(f"""
-        <div style="display:flex; justify-content:center; margin-bottom:1rem;">
-            <img src="{stimulus['image_url']}" style="max-height:350px; max-width:100%; object-fit:contain; border-radius:0px;">
-        </div>
-    """, unsafe_allow_html=True)
+    import requests
+    from PIL import Image
+    from io import BytesIO
+
+    try:
+        headers = {"User-Agent": "Mozilla/5.0"}
+        response = requests.get(stimulus["image_url"], headers=headers, timeout=10)
+        img = Image.open(BytesIO(response.content))
+        st.image(img, use_container_width=True)
+    except Exception as e:
+        st.warning("לא ניתן לטעון את התמונה")
 
     st.markdown(f'<div class="caption-label">תיאור:</div>', unsafe_allow_html=True)
     st.markdown(stimulus["caption"])
