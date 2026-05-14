@@ -222,7 +222,7 @@ elif st.session_state.stage == "experiment":
         img = Image.open(BytesIO(response.content))
         st.image(img, use_container_width=True)
     except Exception as e:
-        st.warning("לא ניתן לטעון את התמונה")
+        st.warning(f"שגיאה: {e}")
 
     st.markdown(f'<div class="caption-label">תיאור:</div>', unsafe_allow_html=True)
     st.markdown(stimulus["caption"])
