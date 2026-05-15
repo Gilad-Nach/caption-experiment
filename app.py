@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 import uuid
 import base64
 from db import get_sample_stimuli, save_response
@@ -96,16 +95,14 @@ st.markdown("""
         [data-testid="stImage"] {
             display: flex !important;
             justify-content: center !important;
+            align-items: center !important;
         }
 
         [data-testid="stImage"] img {
-            max-height: 350px !important;
-            width: auto !important;
+            max-height: 280px !important;
             max-width: 100% !important;
             object-fit: contain !important;
             border-radius: 0px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
         }
 
         .caption-label {
@@ -153,7 +150,6 @@ if "ratings" not in st.session_state:
 
 # ─────────────────────────────────────────
 # LANDING PAGE
-# ─────────────────────────────────────────
 if st.session_state.stage == "landing":
 
     def img_to_base64(path):
@@ -222,7 +218,7 @@ elif st.session_state.stage == "experiment":
         headers = {"User-Agent": "Mozilla/5.0"}
         response = requests.get(stimulus["image_url"], headers=headers, timeout=10, verify=False)
         img = Image.open(BytesIO(response.content))
-        st.image(img, use_container_width=True)
+        st.image(img, width='stretch')
     except Exception as e:
         st.warning(f"שגיאה: {e}")
 
