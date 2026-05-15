@@ -31,7 +31,7 @@ st.markdown("""
 
         .block-container {
             padding-top: 3rem;
-            padding-bottom: 2rem;
+            padding-bottom: 5rem;
             max-width: 860px;
         }
 
@@ -99,7 +99,7 @@ st.markdown("""
         }
 
         [data-testid="stImage"] img {
-            max-height: 280px !important;
+            max-height: 180px !important;
             max-width: 100% !important;
             object-fit: contain !important;
             border-radius: 0px !important;
